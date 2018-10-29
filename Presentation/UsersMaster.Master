@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UsersMaster.Master.cs" Inherits="Presentation.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="myCSS/generalCSS.css" rel="stylesheet" media="screen" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid colorBlue paddingMasterPageDown">
+            <div class="row">
+                <div class="col-6">
+                    <asp:ImageButton ID="imgLogo" runat="server" ImageUrl="Image/logo-Rosvil.png" Width="150px" class="navbar-brand" />
+                </div>
+                <div class="col-6 ">
+                    <nav class="navbar navbar-expand-md  justify-content-end" style="position: relative;">
+                        <button class="navbar-toggler navbar-dark icon-bar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" style="padding: 20px">
+                            <span class="navbar-toggler-icon" style="padding: 22px"></span>
+                        </button>
+                        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent" >
+                            <ul class="navbar-nav text-right">
+                                <li class="nav-item active">
+                                   <asp:LinkButton ID="lbConfiguration" runat="server" CssClass="btn" EnableTheming="True" Font-Names="Lucida Calligraph" Font-Size="18pt" Font-Underline="False" ForeColor="White">Configuración</asp:LinkButton>
+                                </li>
+                                <li class="nav-item active">
+                                    <asp:LinkButton ID="lbLogOut" runat="server" CssClass="btn" EnableTheming="True" Font-Names="Lucida Calligraph" Font-Size="18pt" Font-Underline="False" ForeColor="White">Cerrar Sesión</asp:LinkButton>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPage" runat="server">
+        </asp:ContentPlaceHolder>
+        <div class="container colorBlue paddingMasterPageDown">
+            <div class="row">
+                <div class="col-6">
+                    &copy; 2018, Todos los Derechos Reservados.
+                </div>
+                <div class="col-6 alingToRight">
+                    Pagina Diseñada por | <a>Kevin</a> | <a>Anthony</a> | <a>Ester</a> | <a>José</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
